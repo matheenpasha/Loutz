@@ -22,3 +22,5 @@ var sqrt = function(n, guess) {
 var sqrtOfTwo = sqrt(2, 1);
 
 console.log(sqrtOfTwo, sqrtOfTwo * sqrtOfTwo);
+
+// see Newton's method
