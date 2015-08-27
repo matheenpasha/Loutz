@@ -111,11 +111,11 @@ sock.pipe(process.stdout);
 // repl server
 
 
-
+/*
 var net = require('net');
-var repl = net.connect('repl');
+var repl = require('repl');
 
-net.createServer(function(socket){
+var server = net.createServer(function(socket){
 
   repl
     .start({
@@ -128,8 +128,26 @@ net.createServer(function(socket){
       socket.end();
     });
 
-}).listen(5001);
+});
 
 
 
+server.listen(8080);
 
+*/
+
+
+//trying out POSIX signals
+
+/*
+ The node 'process' object exposes all the POSIX signals and we can subscribe to them.
+#
+ more details on https://en.wikipedia.org/wiki/Unix_signal#POSIX_signals
+*
+
+setInterval(function() {}, 1e6);
+
+process.on('SIGINT', function() {
+  process.stdout.write('sigint signal recieved');
+  process.exit(1);
+});  */
