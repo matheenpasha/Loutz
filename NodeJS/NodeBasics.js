@@ -163,6 +163,8 @@ process.on('SIGINT', function() {
 //Process.nextTick(callback)
 
 
+/*
+
 var events = require('events');
 
 
@@ -181,5 +183,39 @@ myEnitter.on('started', function() {
   process.stdout.write('started');
 });
 
+*/
+
+//Process.setImmediate(callback)
+
+/*
+
+nextTick and setImmediate are sister functions
+The main difference between nextTick and setImmediate is the callback will be executed after I/O for nextTick and after I/O
+for setImmediate
+
+*/
+
+//------------------- Timers
+
+/*
+
+setTimeout and setInterval (almost same as client side JS)
+
+*/
 
 
+//-------------------- Priority of executon in the V8 thread
+
+/*
+
+
+1. Execution blocks
+2. Timers
+3. I/O
+4. Deferred Execution blocks
+
+
+*/
+
+
+//-------------------------- Example (twitter -  get tweets of #NodeJS)
