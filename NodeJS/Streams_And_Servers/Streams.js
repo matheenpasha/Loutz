@@ -39,9 +39,14 @@ console.log(w); // AAAAAAAAAAAAAAAAAAAAtrue
 var net = require('net');
 var stream = require('stream');
 
+
+//creates a tcp server
+
 net.createServer(function(socket) {
   socket.write('Go ahead and type something you prick!!');
   socket.on('readable', function() {
     process.stdout.write(this.read());
   });
 }).listen(8080);
+
+//telnet 127.0.0.1 8080
