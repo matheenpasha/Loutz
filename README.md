@@ -1,4 +1,4 @@
-Loutz
+Loutz - JS sandbox
 =====
 
-Practising different codes and programs and techniques
+Practising different algorithms, programs and techniques in JavaScript
